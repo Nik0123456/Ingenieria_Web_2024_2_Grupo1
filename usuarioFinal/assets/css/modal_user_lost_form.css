@@ -1,0 +1,61 @@
+/* Estilo básico para centrar el botón */
+#centrar-boton {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Estilos para el modal */
+.modal {
+    position: fixed;
+    z-index: 100000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0; /* Comenzamos con el modal invisible */
+    visibility: hidden; /* No es visible al inicio */
+    transition: opacity 0.3s ease, visibility 0.3s ease; /* Añadimos transición */
+}
+
+.modal.show {
+    opacity: 1; /* Visible */
+    visibility: visible; /* Mostramos el modal */
+}
+
+.modal-content {
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 8px;
+    width: 300px;
+    text-align: center;
+}
+
+.modal-content p {
+    font-size: 18px;
+    margin-bottom: 15px;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: center;
+}
+
+/* Estilo del botón Aceptar */
+#aceptar-btn {
+    background-color: #4f46e5;
+    color: white;
+    padding: 12px 30px; /* Ajustar el padding */
+    border: none;
+    border-radius: 5px;
+    font-size: 18px; /* Aumentar el tamaño de la fuente */
+    cursor: pointer;
+    min-width: 100px; /* Ancho mínimo de los botones */
+    text-align: center; /* Centrar el texto dentro del botón */
+    transition: background-color 0.2s;
+}
+
+#aceptar-btn:hover {
+    background-color: #2e3b79;
+}

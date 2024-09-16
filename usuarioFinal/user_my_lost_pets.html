@@ -1,0 +1,152 @@
+<!DOCTYPE HTML>
+<!--
+	Editorial by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>PetLink</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+        <link rel="stylesheet" href="assets/css/lost_pets.css" />
+		<link rel="icon" href="images/favicon.png" type="image/x-icon">
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+
+							<!-- Header -->
+								<header id="header">
+									<img src="images/user/perdidas.png" alt="Icono de mascotas perdidas" class="icons">
+									<strong class="logo">MASCOTAS PERDIDAS</strong>
+									<section id="search" class="alt">
+										<form method="post" action="#">
+											<input type="text" name="query" id="query" placeholder="Buscar" />
+										</form>
+									</section>
+								</header>
+                            
+                            <!--Barra de navegacion de todas las publicaciones y mis publicaciones-->
+
+                            <nav class="nav-links">
+                                <a href="user_lost_pets.html" class="active-link">Todas las publicaciones</a>
+                                <a href="user_my_lost_pets.html">Mis publicaciones</a>
+                                <a href="#" class="button" id="publicacion_mascota_perdida">Publicar mascota perdida</a>
+                            </nav>
+
+							<!-- Banner -->
+								<section class="banner">
+									<div class="content">
+										<header>
+											<h1 class="pet_name">Trufa</h1>
+											<p>Información de pérdida</p>
+										</header>
+										<p>Última ubicación conocida: Av. José Balta 245</p>
+                                        <p>Fecha y hora de último avistamiento: 01/09/2024 | 14:45 horas</p>
+										<p>Descripción: Perro peruano sin pelo | Tamaño mediano | 3 años</p>
+                                        <p>Información de contacto: Ander Vilchez | 925 345 643</p>
+                                        
+                                        <ul class="actions">
+											<li><a href="#" class="button big">Modificar Estado</a></li>
+                                            <li><a href="#" class="button big">Mascota Encontrada</a></li>
+										</ul>
+									</div>
+									<span class="image object">
+										<img src="images/user/perro_hogar_temporal.jpg" alt="Mascota perdida 1"/>
+									</span>
+								</section>
+
+								<section class="banner">
+									<div class="content">
+										<header>
+											<h1 class="pet_name">Ramsés IV</h1>
+											<p>Información de perdida</p>
+										</header>
+										<p>Última ubicación conocida: Av. José Balta 245</p>
+                                        <p>Fecha y hora de último avistamiento: 24/08/2024 | 12:51 horas</p>
+										<p>Descripción: Gato egipcion | Tamaño pequeño | 2 años</p>
+                                        <p>Información de contacto: John Godot | 943 435 353.</p>
+										<ul class="actions">
+											<li><a href="#" class="button big">Modificar Estado</a></li>
+                                            <li><a href="#" class="button big">Mascota Encontrada</a></li>
+										</ul>
+									</div>
+									<span class="image object">
+										<img src="images/user/gato_adopcion.jpg" alt="Mascota perdida 2" />
+									</span>
+								</section>
+						</div>
+					</div>
+
+				<!-- Sidebar -->
+					<div id="sidebar">
+						<div class="inner">
+
+							<!-- Search -->
+								<section class="alt" id="sidebar-header">
+									<img src="images/favicon.png" alt="Logo" id="sidebar-icon">
+									<p id ="sidebar-title">PetLink</p>
+								</section>
+
+							<!-- Menu -->
+							<nav id="menu">
+								<header class="major">
+									<h2>Menu</h2>
+								</header>
+								<ul>
+
+									<li><a href="user_events.html">EVENTOS</a></li> 
+									<!-- G: Se agregó la clase subrayarPáginaActual para subrayarlo en la pestaña actual -->
+									
+									<li><a href="user_shelter.html">ALBERGUES</a></li>
+									<li><a href="user_temporal.html">HOGAR TEMPORAL</a></li>
+									<li>
+										<span class="opener">DONACIONES</span>
+										<ul>
+											<li><a href="user_donationRequest.html">Solicitudes de donación</a></li>
+											<li><a href="user_donationHistorial.html">Donaciones realizadas</a></li>
+										</ul>
+									</li>
+									<li><a href="user_adoptions.html">ADOPCIONES</a></li>
+									<li><a href="user_reports.html">DENUNCIAS</a></li>
+									<li><a href="user_lost_pets.html" class="subrayarPaginaActual">MASCOTAS PERDIDAS</a></li>
+									<li><a href="user_profile.html">PERFIL</a></li>
+								</ul>
+							</nav>
+						</div>
+					</div>
+
+			</div>
+		
+
+		<!-- Ventana para elegir el tipo de formulario a realizar -->
+
+        <div id="myModal" class="modal">
+            <div class="modal-content">
+                <!-- Botón cerrar -->
+                <span class="close" id="closeModal">&times;</span>
+                <h2>¿La mascota es suya?</h2>
+                <div class="modal-buttons">
+                    <button id="siButton">Sí</button>
+                    <button id="noButton">No</button>
+                </div>
+            </div>
+        </div>
+
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+			<script src="assets/js/modal_lost_pets.js"></script>
+	</body>
+</html>

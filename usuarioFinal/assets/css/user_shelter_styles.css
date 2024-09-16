@@ -1,0 +1,190 @@
+/* Estilo para subrayar la página actual en el menú */
+.subrayarPaginaActual {
+    text-decoration: underline;
+}
+
+/* Tamaño del título de los eventos */
+.tituloBannerEventos {
+    font-size: 2.5em;
+    line-height: 1.2; /* Ajuste de la altura de línea */
+    margin: 0; /* Elimina margen superior e inferior */
+}
+
+/* Tamaño del subtítulo de vacantes disponibles */
+.subtituloVacantesDisponibles {
+    font-size: 1em;
+    margin-bottom: 0.3em;
+    margin-top: 0.4em;
+}
+
+/* Estilo para la información del evento */
+.informacionEvento {
+    font-size: 1.5em;
+    color: #1A1A1A;
+    margin-bottom: 0.3em;
+}
+
+/* Estilo para el subtítulo de información del evento */
+.informacionEventoSubtitulo {
+    font-size: 1.2em;
+    color: #1A1A1A;
+    margin-bottom: 0.1em;
+}
+
+/* Margen final para ciertos elementos */
+.marginFinalObjeto {
+    margin-bottom: 1.5em;
+}
+
+.informacionLimiteSuperior {
+    margin-top: 1em;
+}
+
+.informacionLimiteInferior{
+    margin-bottom: 1.333333333333333333333333333333em;
+}
+
+
+
+/* Estilo para .seccionPrueba */
+.seccionPrueba {
+    background-color: whitesmoke !important;
+    padding: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100% !important;
+    box-sizing: border-box;
+    margin: 0 !important;
+    padding: 0 !important;
+    margin-top: 2em !important;
+    border: 0;
+}
+
+/* Caja que contiene las barras de búsqueda y filtro */
+.search-filter-container {
+    display: flex;
+    justify-content: space-between; /* Mantiene las barras en los extremos */
+    align-items: flex-start; /* Alinea los textos de los labels arriba de las barras */
+    background-color: whitesmoke; /* Fondo de la caja */
+    padding: 1.5em;
+    border: 1px solid #ccc; /* Borde rectangular */
+    border-radius: 0; /* Sin bordes circulares */
+    width: 100%;
+    max-width: 1200px; /* Tamaño máximo */
+    box-sizing: border-box;
+}
+
+/* Secciones de búsqueda y filtro */
+.search-filter-container section {
+    display: flex;
+    flex-direction: column;
+    width: 48%; /* Hace que las dos barras ocupen espacio equitativo */
+}
+
+.label-filter {
+    font-size: 1.1em;
+    margin-bottom: 0.5em;
+}
+
+/* Estilo para el input de búsqueda y el select de filtro */
+input[type="text"],
+select {
+    padding: 0.5em;
+    font-size: 1em;
+    width: 100%;
+    background-color: #f5f5f5; /* Fondo de los inputs */
+    border: 1px solid #ccc;
+    border-radius: 0; /* Bordes rectangulares */
+    box-sizing: border-box;
+}
+
+/* Responsividad para las barras de búsqueda y filtro */
+@media screen and (max-width: 768px) {
+    .search-filter-container {
+        flex-direction: column; /* Apila las barras en pantallas pequeñas */
+        align-items: center;
+    }
+
+    .search-filter-container section {
+        width: 100%; /* Ocupa todo el ancho en pantallas pequeñas */
+        margin-bottom: 1em;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .search-filter-container {
+      padding: 1em; /* Reduce el padding en pantallas más pequeñas */
+    }
+
+    .label-filter {
+      font-size: 1em; /* Reduce ligeramente el tamaño del texto */
+    }
+
+    input[type="text"],
+    select {
+        padding: 0.4em;
+        font-size: 0.9em;
+    }
+}
+
+/* ---------------- NUEVOS ESTILOS PARA EL LOGO Y EL TÍTULO ALINEADOS Y RESPONSIVE ---------------- */
+
+/* Estilo para el contenedor que incluye el logo y el título */
+.header-evento {
+    display: flex;
+    justify-content: center; /* Centra horizontalmente el logo y el título en pantallas grandes */
+    align-items: center; /* Alinea el logo y el título en el mismo eje vertical */
+    gap: 15px; /* Espacio entre el logo y el título */
+    flex-wrap: wrap; /* Permite que el título se ajuste si es muy largo */
+}
+
+/* Estilo del logo */
+.logo-evento {
+    width: 50px; /* Tamaño del logo */
+    height: auto; /* Mantiene la proporción de la imagen */
+    flex-shrink: 0; /* Evita que el logo se encoja */
+}
+
+/* Estilo del título */
+.tituloBannerEventos {
+    font-size: 2.2em;
+    line-height: 1.2; /* Altura de línea para mantener el espaciado correcto */
+    margin: 0; /* Elimina márgenes que desalineen */
+    flex: 1; /* Permite que el título ocupe el espacio restante */
+    white-space: normal; /* Permite que el texto se divida en varias líneas si es necesario */
+    overflow: visible; /* Asegura que todo el contenido sea visible */
+    text-align: left; /* Alineación del texto a la izquierda en pantallas grandes */
+}
+
+/* ------------------- RESPONSIVE DESIGN ------------------- */
+
+/* Para pantallas medianas y pequeñas */
+@media screen and (max-width: 768px) {
+    .header-evento {
+        flex-direction: column; /* Apila el logo y el título verticalmente */
+        align-items: center; /* Centra el logo y el título cuando están apilados */
+        text-align: center; /* Centra el texto cuando están apilados */
+    }
+
+    .tituloBannerEventos {
+        font-size: 2em; /* Reduce el tamaño del título en pantallas medianas */
+    }
+
+    .logo-evento {
+        margin-bottom: 10px; /* Añade espacio entre el logo y el título cuando están apilados */
+    }
+}
+
+/* Para pantallas muy pequeñas como celulares */
+@media screen and (max-width: 480px) {
+    .tituloBannerEventos {
+        font-size: 1.8em; /* Tamaño del título más pequeño para pantallas muy pequeñas */
+        line-height: 1.1; /* Ajuste de la altura de línea para mejorar la legibilidad */
+    }
+
+    .logo-evento {
+        width: 40px; /* Reduce el tamaño del logo para pantallas pequeñas */
+        margin-bottom: 8px; /* Menor espacio debajo del logo en pantallas pequeñas */
+    }
+}

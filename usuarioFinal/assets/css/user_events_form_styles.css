@@ -1,0 +1,192 @@
+.input-label{
+  color: #3d4449;
+  font-weight: 500;
+  margin-bottom: 5px;
+  font-weight: 600;
+}
+
+#titulo-banner{
+  padding: 0 0 0 1em;
+  display: block;
+  width: 100%;
+  margin-bottom: 0;
+  margin-top: 1em;
+}
+
+#indicaciones-banner{
+  margin-bottom: 0;
+}
+
+#fechaInicio,
+#fechaFin {
+  width: 100%;
+  padding: 0.75em;
+  border-radius: 0.375em;
+  border: 1px solid #d2d7d9;
+  background-color: #ffffff;
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  color: #555;
+}
+
+/* Ajustar el tamaño y el margen para que coincidan con el diseño */
+#fechaInicio-container,
+#fechaFin-container {
+  width: 50%;
+  margin-right: 0;
+}
+
+/* Responsividad para pantallas pequeñas */
+@media screen and (max-width: 768px) {
+  #fechaInicio-container,
+  #fechaFin-container {
+    width: 100%;
+    margin-right: 0;
+  }
+}
+
+/* Centrar el botón de "Postular para hogar temporal" */
+#centrar-boton {
+  display: flex;
+  justify-content: center;
+  margin-top: 2em;
+}
+
+#archivo-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px; /* Espacio entre el botón y el texto */
+  max-width: 100%;
+}
+
+/* Botón del archivo */
+#archivo-boton {
+  padding: 0.75em 1.5em;
+  background-color: #f0f0f0;
+  color: #333;
+  font-size: 0.9em;
+  border: 1px solid #ccc;
+  border-radius: 0.375em;
+  cursor: pointer;
+  flex-shrink: 0; /* Evitar que el botón cambie de tamaño */
+}
+
+/* Truncar el texto del archivo */
+#archivo-nombre {
+  display: inline-block;
+  max-width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  flex-grow: 1; /* Permitir que el texto tome el espacio restante */
+}
+
+#form-header{
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+  gap: 10px;
+  margin-bottom: 1em;
+}
+
+#form-title{
+  font-size: 20px;
+  color: #3d4449;
+  font-weight: 900;
+}
+
+#form-icon{
+  width: 40px;
+  height: 40px;
+  display: inline-block;
+}
+
+.informacionEvento{
+  display: block;
+}
+
+.banner-div{
+  width: 100%;;
+}
+
+.banner-div p{
+  margin: 0;
+}
+
+.separador {
+  margin-bottom: 10px !important;
+}
+
+/* Estilos para la ventana modal */
+.modal {
+  display: none; /* Oculta la ventana por defecto */
+  position: fixed;
+  z-index: 1000000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background-color: #f4f4f4;
+  padding: 20px;
+  border-radius: 8px;
+  width: 300px;
+  position: relative;
+  text-align: center;
+  margin: auto;
+}
+
+.modal-content h2 {
+  font-size: 18px;
+  margin-bottom: 15px;
+  text-align: center;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+/* Botones modales*/
+
+.modal-buttons {
+  display: flex;           /* Usar flexbox para colocar los botones en una fila */
+  justify-content: center;  /* Centrar los botones horizontalmente */
+  gap: 20px;                /* Espacio entre los botones */
+  margin-top: 20px;         /* Separar los botones del texto */
+}
+
+.modal-buttons button {
+  .modal-buttons button {
+      background-color: #4f46e5;
+      color: white;
+      padding: 12px 30px;       /* Ajustar el padding */
+      border: none;
+      border-radius: 5px;
+      font-size: 18px;          /* Aumentar el tamaño de la fuente */
+      cursor: pointer;
+      min-width: 100px;         /* Ancho mínimo de los botones */
+      text-align: center;       /* Centrar el texto dentro del botón */
+      transition: background-color 0.2s;
+  }
+}
+
+.modal-buttons button:hover {
+  background-color: #2e3b79;
+}
+
+/* Botón para cerrar (X) */
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.close:hover {
+  color: red;
+}

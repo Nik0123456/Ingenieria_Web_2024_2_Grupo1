@@ -1,0 +1,114 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>PetLink</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="assets/css/user_money_donation_form_styles.css" />
+		<link rel="icon" href="images/favicon.png" type="image/x-icon">
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+
+							<!-- Header -->
+								<header id="header">
+									<strong class="logo">Formulario de donación económica</strong>
+								</header>
+
+							<!-- Banner -->
+								<section class="banner">
+									<div class="row gtr-uniform">
+										<header id="form-header">
+											<img src="images/user/donation.png" alt="Logo" id="form-icon">
+											<h1 id="form-title">Donación para "Charles"</h1>
+										</header>
+										<div class="col-6 col-12-xsmall">
+											<label for="monto" class="input-label">Ingresa el monto donado</label>
+											<input type="text" id="monto" value="" placeholder="" />
+										</div>
+										<div class="col-6 col-12-xsmall">
+											<label for="archivo" class="input-label">Foto de la donación</label>
+											<input type="file" id="archivo" name="archivo" />
+										</div>
+										<div class="QRs">
+											<img src="images/user/yape.jpg" alt="QR Yape">
+											<img src="images/user/plin.jpg" alt="QR Plin">
+										</div>
+										<!-- Break -->
+										<div class="col-12" id="centrar-boton">
+											<button href="#" id="send_button">Donar</button>
+										</div>
+									</div>
+								</form>
+							</section>
+							<form method="post" action="#">
+						</div>
+					</div>
+
+				<!-- Sidebar -->
+					<div id="sidebar">
+						<div class="inner">
+
+							<!-- Search -->
+								<section class="alt" id="sidebar-header">
+									<img src="images/favicon.png" alt="Logo" id="sidebar-icon">
+									<p id ="sidebar-title">PetLink</p>
+								</section>
+
+							<!-- Menu -->
+							<nav id="menu">
+								<header class="major">
+									<h2>Menu</h2>
+								</header>
+								<ul>
+
+									<li><a href="user_events.html">EVENTOS</a></li> 
+									<!-- G: Se agregó la clase subrayarPáginaActual para subrayarlo en la pestaña actual -->
+									
+									<li><a href="user_shelter.html"  >ALBERGUES</a></li>
+									<li><a href="user_temporal.html" >HOGAR TEMPORAL</a></li>
+									<li>
+										<span class="opener subrayarPaginaActual">DONACIONES</span>
+										<ul>
+											<li><a href="user_donationRequest.html">Solicitudes de donación</a></li>
+											<li><a href="user_donationHistorial.html">Donaciones realizadas</a></li>
+										</ul>
+									</li>
+									<li><a href="user_adoptions.html">ADOPCIONES</a></li>
+									<li><a href="user_reports.html">DENUNCIAS</a></li>
+									<li><a href="user_lost_pets.html">MASCOTAS PERDIDAS</a></li>
+									<li><a href="user_profile.html">PERFIL</a></li>
+								</ul>
+							</nav>
+						</div>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+			<script src="assets/js/modal_event_form.js"></script>
+		
+			<div id="myModal" class="modal">
+				<div class="modal-content">
+					<!-- Botón cerrar -->
+					<span class="close" id="closeModal">&times;</span>
+					<h2>Gracias por su donación. Pronto será validada y aparecerá en la sección "Donaciones realizadas".</h2>
+					<div class="modal-buttons">
+						<button id="acceptButton">Aceptar</button>
+					</div>
+				</div>
+			</div>
+	</body>
+</html>

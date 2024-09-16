@@ -1,0 +1,130 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>PetLink</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="assets/css/user_temporal_form_styles.css" />
+		<link rel="icon" href="images/favicon.png" type="image/x-icon">
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+
+							<!-- Header -->
+								<header id="header">
+									<strong class="logo">Formulario de denuncia por maltrato animal</strong>
+								</header>
+
+							<!-- Banner -->
+								<section class="banner">
+									<div class="row gtr-uniform">
+										<section class="alt" id="form-header">
+											<img src="images/user/form.png" alt="Logo" id="form-icon">
+											<h2 id="form-title">Complete el siguiente formulario</h2>
+										</section>
+										<p id="indicaciones-banner">Al enviar el formulario accede a compartir sus nombres, apellidos y correo electrónico con el albergue al que se le delegue el caso.</p>
+										<div class="col-6 col-12-xsmall">
+											<label for="nombres" class="input-label">Nombre del maltratador</label>
+											<input type="text" id="nombres" value="" placeholder="" />
+										</div>
+										<div class="col-6 col-12-xsmall">
+											<label for="tipo" class="input-label">Tipo de maltrato</label>
+											<input type="text" id="tipo" value="" placeholder="" />
+										</div>
+										<!-- Break -->
+										<div class="col-6 col-12-xsmall">
+											<label for="raza" class="input-label">Raza</label>
+											<input type="text" id="raza" value="" placeholder="" />
+										</div>
+										<div class="col-6 col-12-xsmall">
+											<label for="tamano" class="input-label">Tamaño del animal</label>
+											<select id="tamano">
+												<option value="">Seleccione el tamaño del animal</option>
+												<option value="1">Pequeño</option>
+												<option value="2">Mediano</option>
+												<option value="3">Grande</option>
+											</select>
+										</div>
+										<!-- Break -->
+										<div class="col-6 col-12-xsmall">
+											<label for="ubicacion" class="input-label">Ubicación del animal maltratado</label>
+											<input type="text" id="ubicacion" value="" placeholder="" />
+										</div>
+										<div class="col-6 col-12-xsmall">
+											<label for="denuncia" class="input-label">¿Se ha hecho denuncia policial?</label>
+											<select id="distrito">
+												<option value="">Seleccione su respuesta</option>
+												<!-- Norte -->
+												<option value="1">Sí se ha denunciado</option>
+												<option value="2">No se ha denunciado</option>
+                                            </select>
+										</div>
+                                        <!-- Break -->
+										<div class="col-12" id="centrar-boton">
+											<ul class="actions">
+												<li><input type="submit" value="Enviar denuncia"/></li>
+											</ul>
+										</div>
+									</div>
+								</form>
+							</section>
+							<form method="post" action="#">
+						</div>
+					</div>
+
+				<!-- Sidebar -->
+					<div id="sidebar">
+						<div class="inner">
+
+							<!-- Search -->
+								<section class="alt" id="sidebar-header">
+									<img src="images/favicon.png" alt="Logo" id="sidebar-icon">
+									<p id ="sidebar-title">PetLink</p>
+								</section>
+
+							<!-- Menu -->
+							<nav id="menu">
+								<header class="major">
+									<h2>Menu</h2>
+								</header>
+								<ul>
+
+									<li><a href="user_events.html">EVENTOS</a></li> 
+									<!-- G: Se agregó la clase subrayarPáginaActual para subrayarlo en la pestaña actual -->
+									
+									<li><a href="user_shelter.html"  >ALBERGUES</a></li>
+									<li><a href="user_temporal.html" >HOGAR TEMPORAL</a></li>
+									<li>
+										<span class="opener">DONACIONES</span>
+										<ul>
+											<li><a href="user_donationRequest.html">Solicitudes de donación</a></li>
+											<li><a href="user_donationHistorial.html">Donaciones realizadas</a></li>
+										</ul>
+									</li>
+									<li><a href="user_adoptions.html">ADOPCIONES</a></li>
+									<li><a href="user_reports.html" class="subrayarPaginaActual">DENUNCIAS</a></li>
+									<li><a href="user_lost_pets.html">MASCOTAS PERDIDAS</a></li>
+									<li><a href="user_profile.html">PERFIL</a></li>
+								</ul>
+							</nav>
+						</div>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

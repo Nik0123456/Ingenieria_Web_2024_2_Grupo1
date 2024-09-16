@@ -1,0 +1,108 @@
+/* General banner styles */
+.banner {
+    display: flex;
+    justify-content: flex-start; /* Alinea el contenido al inicio */
+    align-items: flex-start; /* Alinea verticalmente los elementos */
+    background-color: #e0f7fa; /* Fondo azul claro */
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Contenedor del contenido textual y la imagen */
+  .banner .content {
+    display: flex;
+    align-items: flex-start; /* Alinea la imagen y el contenido de texto arriba */
+    width: 100%;
+    gap: 30px; /* Espacio entre la imagen y el texto */
+  }
+  
+  /* Imagen de la mascota */
+  .left-section {
+    display: flex;
+    flex-direction: column; /* Coloca la imagen y el botón verticalmente */
+    align-items: center; /* Centra la imagen y el botón */
+    min-width: 150px; /* Asegura un ancho mínimo para la imagen */
+  }
+  
+  .left-section img.logo-pet {
+    width: 220px;
+    height: 220px;
+    border-radius: 50%; /* Imagen circular */
+    margin-bottom: 20px; /* Espacio entre la imagen y el botón */
+  }
+  
+  /* Estilo del botón de adopción debajo de la imagen */
+  .left-section .button.big {
+    background-color: #1b17d1; /* Color de fondo del botón */
+    color: white; /* Color del texto */
+    padding: 10px 20px; /* Tamaño del relleno interno del botón */
+    text-decoration: none; /* Elimina el subrayado */
+    border-radius: 5px; /* Bordes redondeados */
+    font-size: 1.1em; /* Tamaño del texto */
+    white-space: nowrap; /* Evita que el texto se divida */
+    display: inline-block;
+  }
+  
+  .left-section .button.big:hover {
+    background-color: #3942c4; /* Color más oscuro al pasar el ratón */
+  }
+  
+  /* Contenedor del texto a la derecha */
+  .details {
+    flex: 1; /* Ocupa el resto del espacio disponible */
+  }
+  
+  /* Encabezado con el nombre de la mascota */
+  .tituloBannerAdopcion {
+    font-size: 2.7em; /* Agrandar el texto del título */
+    font-weight: bold;
+    margin: 0;
+    margin-bottom: 10px;
+  }
+  
+  /* Información de la mascota (raza, edad, sexo) */
+  .subtituloInformacion {
+    font-size: 1.3em; /* Agrandar los subtítulos */
+    margin: 0;
+    color: #1a1a1a;
+  }
+  
+  /* Descripción de la mascota */
+  .informacionAdopcion {
+    font-size: 1.4em; /* Agrandar el texto de la descripción */
+    color: #333;
+    margin-top: 10px;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .banner {
+      flex-direction: column; /* Colocar todo verticalmente en pantallas pequeñas */
+      align-items: flex-start;
+    }
+  
+    .left-section {
+      align-items: center; /* Centra la imagen y el botón también en pantallas pequeñas */
+    }
+  
+    .left-section img.logo-pet {
+      width: 120px;
+      height: 120px;
+    }
+  
+    .actions .button.big {
+      width: 100%; /* El botón ocupa todo el ancho en pantallas pequeñas */
+      text-align: center;
+    }
+  
+    .tituloBannerAdopcion {
+      font-size: 2em;
+    }
+  
+    .subtituloInformacion, .informacionAdopcion {
+      font-size: 1.1em;
+    }
+  }
+  

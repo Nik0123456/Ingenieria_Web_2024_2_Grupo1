@@ -1,0 +1,92 @@
+/* General banner styles */
+.banner {
+    display: flex;
+    justify-content: flex-start; /* Alinea el contenido al inicio */
+    align-items: flex-start; /* Alinea verticalmente los elementos */
+    background-color: #e0f7fa; /* Fondo azul claro */
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Contenedor del contenido textual y la imagen */
+  .banner .content {
+    display: flex;
+    align-items: flex-start;
+    width: 100%;
+    gap: 30px; /* Espacio entre la imagen y el texto */
+  }
+  
+  /* Imagen de la denuncia y botones */
+  .left-section {
+    display: flex;
+    flex-direction: column; /* Coloca la imagen y los botones verticalmente */
+    align-items: center; /* Centra la imagen */
+    width: 250px; /* Ancho del contenedor */
+  }
+  
+  .left-section img.logo-pet {
+    width: 255px; /* Ancho de la imagen */
+    height: 290px; /* Alto de la imagen */
+    margin-bottom: 20px; /* Espacio entre la imagen y los botones */
+  }
+  
+  /* Botones para modificar y eliminar denuncia debajo de la imagen */
+  .left-section .actions {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start; /* Alinea los botones a la izquierda */
+  }
+  
+  .actions .button {
+    background-color: #1b17d1; /* Color del botón */
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-right: 10px; /* Espacio entre los botones */
+  }
+  
+  .actions .button:hover {
+    background-color: #3942c4; /* Cambio de color en hover */
+  }
+  
+  /* Título del banner de denuncia */
+  .tituloBannerDenuncia {
+    font-size: 2.8em;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  /* Subtítulo de información */
+  .subtituloInformacion {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #000; /* Cambia el color del subtítulo a negro */
+  }
+  
+  /* Texto de la denuncia */
+  .informacionDenuncia {
+    font-size: 1.2em;
+    color: #0b0b0b;
+  }
+  
+  /* Responsividad */
+  @media (max-width: 768px) {
+    .banner {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    /* Cambia el tamaño de la imagen en pantallas pequeñas */
+    .left-section img.logo-pet {
+      width: 220px; /* Tamaño de la imagen en pantallas pequeñas */
+      height: 220px;
+    }
+  
+    .tituloBannerDenuncia {
+      font-size: 1.8em;
+    }
+  }
+  

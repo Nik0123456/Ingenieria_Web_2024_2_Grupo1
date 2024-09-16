@@ -1,0 +1,111 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>PetLink</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="assets/css/user_events_form_styles.css" />
+		<link rel="icon" href="images/favicon.png" type="image/x-icon">
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+
+							<!-- Header -->
+								<header id="header">
+									<strong class="logo">Formulario de inscripción a evento</strong>
+								</header>
+
+							<!-- Banner -->
+								<section class="banner">
+									<div class="banner-div">
+										<header id="form-header">
+											<img src="images/user/form.png" alt="Logo" id="form-icon">
+											<h1 id="form-title">Campaña mensual de vacunación a mascotas</h1>
+										</header>
+										<p class="informacionEvento"><strong>Vacantes totales: 200</strong></p>
+										<p class="informacionEvento separador"><strong>Vacantes disponibles: 25</strong></p>
+										<p class="informacionEvento"><strong>Información general:</strong></p>
+										<p class="informacionEvento"> Albergue organizador "Escipión"</p>
+										<p class="informacionEvento">Fecha: Sábado, 26 de junio de 2025</p>
+										<p class="informacionEvento">Hora: 15:00 hrs</p>
+										<p class="informacionEvento separador">Dirección: Av. Josué Salaverry 845</p>
+										<p class="informacionEvento"><strong>Descripción:</strong></p>
+										<p>El albergue "Escipión" junto a su equipo médico
+											organiza una vacunación masiva a distintas mascotas. Se brindarán vacunas para diversos problemas que afectan a diferentes especies, por ejemplo, tendremos vacunas de rabia para los perros, la vacuna triple felina (FVRCP) para los gatos, etc. Estamos comprometidos con la salud de todo tipo de mascotas, por eso ofrecemos este servicio gratis, pero si desea ayudar económicamente al albergue aceptamos cualquier donación.</p>
+										<div class="col-12" id="centrar-boton">
+											<button href="#" id="send_button">Confirmar inscripción</button>
+										</div>
+									</div>
+								</form>
+							</section>
+							<form method="post" action="#">
+						</div>
+					</div>
+
+				<!-- Sidebar -->
+					<div id="sidebar">
+						<div class="inner">
+
+							<!-- Search -->
+								<section class="alt" id="sidebar-header">
+									<img src="images/favicon.png" alt="Logo" id="sidebar-icon">
+									<p id ="sidebar-title">PetLink</p>
+								</section>
+
+							<!-- Menu -->
+							<nav id="menu">
+								<header class="major">
+									<h2>Menu</h2>
+								</header>
+								<ul>
+
+									<li><a href="user_events.html" class="subrayarPaginaActual">EVENTOS</a></li> 
+									<!-- G: Se agregó la clase subrayarPáginaActual para subrayarlo en la pestaña actual -->
+									
+									<li><a href="user_shelter.html">ALBERGUES</a></li>
+									<li><a href="user_temporal.html">HOGAR TEMPORAL</a></li>
+									<li>
+										<span class="opener">DONACIONES</span>
+										<ul>
+											<li><a href="user_donationRequest.html">Solicitudes de donación</a></li>
+											<li><a href="user_donationHistorial.html">Donaciones realizadas</a></li>
+										</ul>
+									</li>
+									<li><a href="user_adoptions.html">ADOPCIONES</a></li>
+									<li><a href="user_reports.html">DENUNCIAS</a></li>
+									<li><a href="user_lost_pets.html">MASCOTAS PERDIDAS</a></li>
+									<li><a href="user_profile.html">PERFIL</a></li>
+								</ul>
+							</nav>
+						</div>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+			<script src="assets/js/modal_event_form.js"></script>
+		
+			<div id="myModal" class="modal">
+				<div class="modal-content">
+					<!-- Botón cerrar -->
+					<span class="close" id="closeModal">&times;</span>
+					<h2>No se puede inscribir en el evento. Ya se encuentra inscrito en otro evento cuyo horario se cruza con este.</h2>
+					<div class="modal-buttons">
+						<button id="acceptButton">Aceptar</button>
+					</div>
+				</div>
+			</div>
+	</body>
+</html>

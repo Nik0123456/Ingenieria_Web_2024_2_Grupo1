@@ -1,0 +1,321 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>PetLink</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="assets/css/user_temporal_form_styles.css" />
+		<link rel="icon" href="images/favicon.png" type="image/x-icon">
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+
+							<!-- Header -->
+								<header id="header">
+									<strong class="logo">Formulario de postulación a hogar temporal</strong>
+								</header>
+
+							<!-- Banner -->
+								<section class="banner">
+									<div class="row gtr-uniform">
+										<section class="alt" id="form-header">
+											<img src="images/user/form.png" alt="Logo" id="form-icon">
+											<h2 id="form-title">Complete el siguiente formulario</h2>
+										</section>
+										<p id="indicaciones-banner">Términos y condiciones:
+											Toda la información ingresada será compartida con los albergues. El rango mínimo de disponibilidad como hogar temporal debe de ser 2 semanas consecutivas, en caso contrario abstenerse de postular</p>
+										<div class="col-6 col-12-xsmall">
+											<label for="nombres" class="input-label">Nombres</label>
+											<input type="text" id="nombres" value="" placeholder="" />
+										</div>
+										<div class="col-6 col-12-xsmall">
+											<label for="apellidos" class="input-label">Apellidos</label>
+											<input type="text" id="apellidos" value="" placeholder="" />
+										</div>
+										<!-- Break -->
+										<div class="col-6 col-12-xsmall">
+											<label for="edad" class="input-label">Edad</label>
+											<input type="text" id="edad" value="" placeholder="" />
+										</div>
+										<div class="col-6 col-12-xsmall">
+											<label for="genero" class="input-label">Género</label>
+											<select id="genero">
+												<option value="">Seleccione su género</option>
+												<option value="1">Masculino</option>
+												<option value="2">Femenino</option>
+												<option value="3">Prefiero no decirlo</option>
+											</select>
+										</div>
+										<!-- Break -->
+										<div class="col-6 col-12-xsmall">
+											<label for="telefono" class="input-label">Número de teléfono</label>
+											<input type="text" id="telefono" value="" placeholder="" />
+										</div>
+										<div class="col-6 col-12-xsmall">
+											<label for="distrito" class="input-label">Distrito</label>
+											<select id="distrito">
+												<option value="">Seleccione su distrito</option>
+												<!-- Norte -->
+												<option value="1">Ancon</option>
+												<option value="2">Santa Rosa</option>
+												<option value="3">Carabayllo</option>
+												<option value="4">Puente Piedra</option>
+												<option value="5">Comas</option>
+												<option value="6">Los Olivos</option>
+												<option value="7">San Martín de Porres</option>
+												<option value="8">Independencia</option>
+
+												<!-- Sur -->
+												<option value="9">San Juan de Miraflores</option>
+												<option value="10">Villa María del Triunfo</option>
+												<option value="11">Villa el Salvador</option>
+												<option value="12">Pachacamac</option>
+												<option value="13">Lurin</option>
+												<option value="14">Punta Hermosa</option>
+												<option value="15">Punta Negra</option>
+												<option value="16">San Bartolo</option>
+												<option value="17">Santa María del Mar</option>
+												<option value="18">Pucusana</option>
+
+												<!-- Este -->
+												<option value="19">San Juan de Lurigancho</option>
+												<option value="20">Lurigancho/Chosica</option>
+												<option value="21">Ate</option>
+												<option value="22">El Agustino</option>
+												<option value="23">Santa Anita</option>
+												<option value="24">La Molina</option>
+												<option value="25">Cieneguilla</option>
+
+												<!-- Oeste -->
+												<option value="26">Rimac</option>
+												<option value="27">Cercado de Lima</option>
+												<option value="28">Breña</option>
+												<option value="29">Pueblo Libre</option>
+												<option value="30">Magdalena</option>
+												<option value="31">Jesus María</option>
+												<option value="32">La Victoria</option>
+												<option value="33">Lince</option>
+												<option value="34">San Isidro</option>
+												<option value="35">San Miguel</option>
+												<option value="36">Surquillo</option>
+												<option value="37">San Borja</option>
+												<option value="38">Santiago de Surco</option>
+												<option value="39">Barranco</option>
+												<option value="40">Chorrillos</option>
+												<option value="41">San Luis</option>
+												<option value="42">Miraflores</option>
+
+											</select>
+										</div>
+										<!-- Break -->
+										<div class="col-12">
+											<label for="direccion" class="input-label">Dirección de residencia</label>
+											<input type="text" id="direccion">
+										</div>
+										<!-- Break -->
+										<div class="col-6 col-12-xsmall">
+											<label for="cuartos" class="input-label">Cantidad de cuartos</label>
+											<input type="text" id="cuartos" value="" placeholder="" />
+										</div>
+										<div class="col-6 col-12-xsmall">
+											<label for="metraje" class="input-label">Metraje de vivienda</label>
+											<input type="text" id="metraje">
+										</div>
+										<!-- Break -->
+										<div class="col-6 col-12-xsmall">
+											<label for="tieneHijo" class="input-label">¿Tiene hijos?</label>
+											<select id="tieneHijo">
+												<option value="">Seleccione su respuesta</option>
+												<option value="1">Sí tengo hijos</option>
+												<option value="2">No tengo hijos</option>
+											</select>
+										</div>
+										<div class="col-6 col-12-xsmall">
+											<label for="tieneMascota" class="input-label">¿Tiene mascotas?</label>
+											<select id="tieneMascota">
+												<option value="">Seleccione su respuesta</option>
+												<option value="1">Sí tengo mascotas</option>
+												<option value="2">No tengo mascotas</option>
+											</select>
+										</div>
+										<!-- Break -->
+										<div class="col-6 col-12-xsmall">
+											<label for="numMascotas" class="input-label">Número de mascotas</label>
+											<input type="text" id="numMascotas" value="" placeholder="" disabled/>
+										</div>
+										<div class="col-6 col-12-xsmall">
+											<label for="tipoMascotas" class="input-label">Tipo de mascotas</label>
+											<input type="text" id="tipoMascotas" disabled>
+										</div>
+										<!-- Break -->
+										<div class="col-6 col-12-xsmall">
+											<label for="viveSolo" class="input-label">¿Vive solo o con dependientes?</label>
+											<select id="viveSolo">
+												<option value="">Seleccione su respuesta</option>
+												<option value="1">Vivo solo</option>
+												<option value="2">Vivo con dependientes</option>
+											</select>
+										</div>
+										<div class="col-6 col-12-xsmall">
+											<label for="trabajaRemoto" class="input-label">¿Trabaja remoto o presencial?</label>
+											<select id="trabajaRemoto">
+												<option value="">Seleccione su respuesta</option>
+												<option value="1">Trabajo remoto</option>
+												<option value="2">Trabajo presencial</option>
+											</select>
+										</div>
+										<!--Break-->
+										<div class="col-6 col-12-xsmall">
+											<label for="nombreRef" class="input-label">Nombre de persona de referencia</label>
+											<input type="text" id="nombreRef" value="" placeholder="" />
+										</div>
+										<div class="col-6 col-12-xsmall">
+											<label for="numeroRef" class="input-label">Número de teléfono de referencia</label>
+											<input type="text" id="numeroRef" value="" placeholder="" />
+										</div>
+										<!-- Break -->
+										<div class="col-6 col-12-xsmall" id="fechaInicio-container">
+											<label for="fechaInicio" class="input-label">Fecha de inicio</label>
+											<input type="date" id="fechaInicio" name="fechaInicio" />
+										  </div>
+										  
+										  <div class="col-6 col-12-xsmall" id="fechaFin-container">
+											<label for="fechaFin" class="input-label">Fecha de fin</label>
+											<input type="date" id="fechaFin" name="fechaFin" disabled />
+										  </div>
+										  
+										  <script>
+											// Obtener las fechas mínimas
+											const fechaInicio = document.getElementById('fechaInicio');
+											const fechaFin = document.getElementById('fechaFin');
+										  
+											function calcularFechas() {
+											  // Fecha actual
+											  const fechaActual = new Date();
+											  // Añadir 3 días a la fecha actual
+											  fechaActual.setDate(fechaActual.getDate() + 3);
+											  // Formatear la fecha en formato YYYY-MM-DD
+											  const fechaMinInicio = fechaActual.toISOString().split('T')[0];
+											  
+											  // Asignar la fecha mínima al input de inicio
+											  fechaInicio.min = fechaMinInicio;
+											  
+											  // Evento para cambiar la fecha de fin según la fecha de inicio
+											  fechaInicio.addEventListener('change', function() {
+												// Deshabilitar el input de fin si no hay fecha de inicio
+												if (!fechaInicio.value) {
+												  fechaFin.disabled = true;
+												  return;
+												}
+										  
+												// Habilitar el input de fin
+												fechaFin.disabled = false;
+										  
+												// Calcular la fecha mínima de fin (14 días después de la fecha de inicio)
+												const fechaInicioSeleccionada = new Date(fechaInicio.value);
+												fechaInicioSeleccionada.setDate(fechaInicioSeleccionada.getDate() + 14);
+												const fechaMinFin = fechaInicioSeleccionada.toISOString().split('T')[0];
+										  
+												// Asignar la fecha mínima al input de fin
+												fechaFin.min = fechaMinFin;
+											  });
+											}
+										  
+											// Ejecutar la función al cargar la página
+											window.onload = calcularFechas;
+										  </script>
+										<!--Break-->
+										<div class="col-12">
+											<label for="archivo" class="input-label">Foto del lugar del temporal</label>
+											<input type="file" id="archivo" name="archivo" />
+										</div>
+										<!-- Break -->
+										<div class="col-12" id="centrar-boton">
+											<ul class="actions">
+												<li><input type="submit" value="Postular para hogar temporal"/></li>
+											</ul>
+										</div>
+										
+										<script>
+											// Obtén los elementos
+											const selectMascota = document.getElementById('tieneMascota');
+											const inputNumMascotas = document.getElementById('numMascotas');
+											const inputTipoMascotas = document.getElementById('tipoMascotas');
+										  
+											// Función que habilita o deshabilita los inputs
+											function toggleInputs() {
+											  if (selectMascota.value === '1') { // "Sí tengo mascotas"
+												inputNumMascotas.disabled = false;
+												inputTipoMascotas.disabled = false;
+											  } else {
+												inputNumMascotas.disabled = true;
+												inputTipoMascotas.disabled = true;
+											  }
+											}
+										  
+											// Escucha el evento de cambio en el select
+											selectMascota.addEventListener('change', toggleInputs);
+										</script>
+									</div>
+								</form>
+							</section>
+							<form method="post" action="#">
+						</div>
+					</div>
+
+				<!-- Sidebar -->
+					<div id="sidebar">
+						<div class="inner">
+
+							<!-- Search -->
+								<section class="alt" id="sidebar-header">
+									<img src="images/favicon.png" alt="Logo" id="sidebar-icon">
+									<p id ="sidebar-title">PetLink</p>
+								</section>
+
+							<!-- Menu -->
+							<nav id="menu">
+								<header class="major">
+									<h2>Menu</h2>
+								</header>
+								<ul>
+
+									<li><a href="user_events.html">EVENTOS</a></li> 
+									<!-- G: Se agregó la clase subrayarPáginaActual para subrayarlo en la pestaña actual -->
+									
+									<li><a href="user_shelter.html"  >ALBERGUES</a></li>
+									<li><a href="user_temporal.html" class="subrayarPaginaActual">HOGAR TEMPORAL</a></li>
+									<li>
+										<span class="opener">DONACIONES</span>
+										<ul>
+											<li><a href="user_donationRequest.html">Solicitudes de donación</a></li>
+											<li><a href="user_donationHistorial.html">Donaciones realizadas</a></li>
+										</ul>
+									</li>
+									<li><a href="user_adoptions.html">ADOPCIONES</a></li>
+									<li><a href="user_reports.html">DENUNCIAS</a></li>
+									<li><a href="user_lost_pets.html">MASCOTAS PERDIDAS</a></li>
+									<li><a href="user_profile.html">PERFIL</a></li>
+								</ul>
+							</nav>
+						</div>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

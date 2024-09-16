@@ -1,0 +1,101 @@
+.input-label{
+  color: #3d4449;
+  font-weight: 500;
+  margin-bottom: 5px;
+  font-weight: 600;
+}
+
+#titulo-banner{
+  padding: 0 0 0 1em;
+  display: block;
+  width: 100%;
+  margin-bottom: 0;
+  margin-top: 1em;
+}
+
+#indicaciones-banner{
+  margin-bottom: 0;
+}
+
+#fechaInicio,
+#fechaFin {
+  width: 100%;
+  padding: 0.75em;
+  border-radius: 0.375em;
+  border: 1px solid #d2d7d9;
+  background-color: #ffffff;
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  color: #555;
+}
+
+/* Ajustar el tamaño y el margen para que coincidan con el diseño */
+#fechaInicio-container,
+#fechaFin-container {
+  width: 50%;
+  margin-right: 0;
+}
+
+/* Responsividad para pantallas pequeñas */
+@media screen and (max-width: 768px) {
+  #fechaInicio-container,
+  #fechaFin-container {
+    width: 100%;
+    margin-right: 0;
+  }
+}
+
+/* Centrar el botón de "Postular para hogar temporal" */
+#centrar-boton ul.actions {
+  display: flex;
+  justify-content: center;
+}
+
+#archivo-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px; /* Espacio entre el botón y el texto */
+  max-width: 100%;
+}
+
+/* Botón del archivo */
+#archivo-boton {
+  padding: 0.75em 1.5em;
+  background-color: #f0f0f0;
+  color: #333;
+  font-size: 0.9em;
+  border: 1px solid #ccc;
+  border-radius: 0.375em;
+  cursor: pointer;
+  flex-shrink: 0; /* Evitar que el botón cambie de tamaño */
+}
+
+/* Truncar el texto del archivo */
+#archivo-nombre {
+  display: inline-block;
+  max-width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  flex-grow: 1; /* Permitir que el texto tome el espacio restante */
+}
+
+#form-header{
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+  gap: 10px;
+}
+
+#form-title{
+  font-size: 20px;
+  color: #3d4449;
+  font-weight: 900;
+}
+
+#form-icon{
+  width: 40px;
+  height: 40px;
+  display: inline-block;
+}

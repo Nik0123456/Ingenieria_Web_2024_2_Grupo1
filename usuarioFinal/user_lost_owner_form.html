@@ -1,0 +1,166 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>PetLink</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/user_lost_form_styles.css" />
+		<link rel="stylesheet" href="assets/css/modal_user_lost_form.css" />
+		<link rel="icon" href="images/favicon.png" type="image/x-icon">
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+
+							<!-- Header -->
+								<header id="header">
+									<strong class="logo">Formulario para reportar mascota perdida</strong>
+								</header>
+
+							<!-- Banner -->
+								<section class="banner">
+									<div class="row gtr-uniform">
+										<section class="alt" id="form-header">
+											<img src="images/user/form.png" alt="Logo" id="form-icon">
+											<h2 id="form-title">Complete el siguiente formulario</h2>
+										</section>
+										<p id="indicaciones-banner">Términos y condiciones:
+											Toda la información ingresada será compartida con los albergues. El rango mínimo de disponibilidad como hogar temporal debe de ser 2 semanas consecutivas, en caso contrario abstenerse de postular</p>
+										<div class="col-6 col-12-xsmall">
+											<label for="nombres" class="input-label">Nombre</label>
+											<input type="text" id="nombres" value="" placeholder="" />
+										</div>
+										<!-- Break -->
+										<div class="col-6 col-12-xsmall">
+											<label for="edad" class="input-label">Edad</label>
+											<input type="text" id="edad" value="" placeholder="" />
+										</div>
+										<div class="col-6 col-12-xsmall">
+											<label for="genero" class="input-label">Tamaño</label>
+											<select id="genero">
+												<option value="">Seleccione el tamaño del animal</option>
+												<option value="1">Pequeño</option>
+												<option value="2">Mediano</option>
+												<option value="3">Grande</option>
+											</select>
+										</div>
+										<!-- Break -->
+										<div class="col-6 col-12-xsmall">
+											<label for="telefono" class="input-label">Raza</label>
+											<input type="text" id="telefono" value="" placeholder="" />
+										</div>
+										
+										<!-- Break -->
+										<div class="col-12">
+											<label for="direccion" class="input-label">Lugar en que se perdio</label>
+											<input type="text" id="direccion">
+										</div>
+										<!-- Break -->
+										<div class="col-12">
+											<label for="direccion" class="input-label">Rasgos distintivos</label>
+											<input type="text" id="direccion">
+										</div>
+										<!-- Break -->
+										<div class="col-6 col-12-xsmall">
+											<label for="nombreRef" class="input-label">Nombre de persona de contacto</label>
+											<input type="text" id="nombreRef" value="" placeholder="" />
+										</div>
+                                        <!-- Break -->
+										<div class="col-6 col-12-xsmall">
+											<label for="numeroRef" class="input-label">Número de contacto</label>
+											<input type="text" id="numeroRef" value="" placeholder="" />
+										</div>
+										<!-- Break -->
+										<div class="col-6 col-12-xsmall" id="fechaInicio-container">
+											<label for="fechaInicio" class="input-label">Fecha en que se perdio</label>
+											<input type="date" id="fechaInicio" name="fechaInicio" />
+										  </div>
+                                        <!-- Break -->
+										<div class="col-6 col-12-xsmall" id="fechaInicio-container">
+                                            <label for="fechaInicio" class="input-label">Hora en que se perdió</label>
+                                            <input type="time" id="fechaInicio" name="fechaInicio" />
+                                        </div>
+                                         <!-- Break -->
+										<div class="col-6 col-12-xsmall">
+											<label for="numeroRef" class="input-label">Recompensa</label>
+											<input type="text" id="numeroRef" value="" placeholder="" />
+										</div>
+										<!--Break-->
+										<div class="col-6 col-12-xsmall">
+											<label for="archivo" class="input-label">Foto de la mascota</label>
+											<input type="file" id="archivo" name="archivo" />
+										</div>
+										<!--Break-->
+										<div class="col-12" id="centrar-boton">
+											<ul class="actions">
+												<li><input type="submit" value="Solicitar publicación" id="solicitar-btn"/></li>
+											</ul>
+										</div>
+									</div>
+								</form>
+							</section>
+						</div>
+					</div>
+
+				<!-- Sidebar -->
+					<div id="sidebar">
+						<div class="inner">
+
+							<!-- Search -->
+								<section class="alt" id="sidebar-header">
+									<img src="images/favicon.png" alt="Logo" id="sidebar-icon">
+									<p id ="sidebar-title">PetLink</p>
+								</section>
+
+							<!-- Menu -->
+							<nav id="menu">
+								<header class="major">
+									<h2>Menu</h2>
+								</header>
+								<ul>
+
+									<li><a href="user_events.html">EVENTOS</a></li> 
+									<!-- G: Se agregó la clase subrayarPáginaActual para subrayarlo en la pestaña actual -->
+									
+									<li><a href="user_shelter.html">ALBERGUES</a></li>
+									<li><a href="user_temporal.html">HOGAR TEMPORAL</a></li>
+									<li>
+										<span class="opener">DONACIONES</span>
+										<ul>
+											<li><a href="user_donationRequest.html">Solicitudes de donación</a></li>
+											<li><a href="user_donationHistorial.html">Donaciones realizadas</a></li>
+										</ul>
+									</li>
+									<li><a href="user_adoptions.html">ADOPCIONES</a></li>
+									<li><a href="user_reports.html">DENUNCIAS</a></li>
+									<li><a href="user_lost_pets.html" class="subrayarPaginaActual">MASCOTAS PERDIDAS</a></li>
+									<li><a href="user_profile.html">PERFIL</a></li>
+								</ul>
+							</nav>
+						</div>
+					</div>
+
+			</div>
+		
+		<!-- Modal -->
+        <div id="modal" class="modal">
+            <div class="modal-content">
+                <p>Se ha enviado la solicitud de publicación. Pronto recibirá un correo de aprobación.</p>
+                <button id="aceptar-btn">Aceptar</button>
+            </div>
+        </div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+			<script src="assets/js/modal_lost_form.js"></script>
+	</body>
+</html>
