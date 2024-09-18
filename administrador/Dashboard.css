@@ -1,0 +1,296 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/* Ajustes del Dashboard Grid */
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: 9fr 3fr; /* El gráfico principal ocupa 9 fracciones, las tarjetas 3 */
+    gap: 20px; /* Espacio entre columnas */
+    width: 100%;
+    max-width: 1300px;
+    height: calc(70vh - 180px); /* Altura dinámica según la ventana */
+    transition: all 0.3s ease; /* Transición suave para los cambios */
+
+}
+
+/* Sección para los gráficos inferiores */
+.dashboard-grid-secondary {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Dos gráficos en fila */
+    gap: 5px; /* Espacio mínimo entre los gráficos */
+    margin-top: 20px; /* Reducir más la separación con los gráficos superiores */
+    overflow: hidden; /* Evitar que los gráficos se salgan de sus tarjetas */
+}
+
+/* Sección de gráficos de Mascotas */
+.dashboard-grid-mascotas {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Dos gráficos en fila */
+    gap: 5px; /* Reducir el espacio entre los gráficos */
+    margin-top: 5px; /* Reducir aún más la separación de los gráficos superiores */
+}
+.dashboard-card, .dashboard-grid {
+    transition: all 0.3s ease;
+}
+/* Ajuste general para las tarjetas de gráficos */
+.dashboard-card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 1.2em;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 100%;
+    height: 320px; /* Reducir la altura de las tarjetas */
+    margin-bottom: 5px !important; /* Reducir el margen inferior */
+    overflow: hidden; /* Evitar superposición de gráficos */
+}
+
+/* Ajustar las tarjetas secundarias (gráficos) */
+.dashboard-grid-secondary .dashboard-card,
+.dashboard-grid-mascotas .dashboard-card {
+    height: 400px !important; /* Reducir altura */
+}
+
+/* Ajuste para evitar el bloque blanco en el gráfico del Top 10 */
+.dashboard-card canvas {
+    display: block;
+    width: 100% !important;
+    height: auto !important; /* Ajusta automáticamente la altura */
+    max-height: 100%; /* Evitar que se salga del contenedor */
+}
+
+/* Asegurar que el gráfico Top 10 ocupe todo el espacio */
+#graficoTopUsuarios {
+    width: 100% !important;
+    height: 100% !important; /* Forzar a que ocupe el 100% de su contenedor */
+    object-fit: contain; /* Ajustar el contenido dentro de los límites sin desbordar */
+
+}
+.grafico-circular {
+    display: flex;
+    flex-direction: column; /* Colocar el título arriba y el gráfico debajo */
+    justify-content: center;
+    align-items: center;
+    height: 100%; /* Asegurar que el contenedor use toda la altura */
+}
+
+/* Corrección del título del gráfico circular */
+.grafico-circular h3 {
+    margin-bottom: 10px;
+    text-align: center;
+    width: 100%;
+}
+
+.grafico-circular canvas {
+    width: 80% !important; /* Asegurar que no sea demasiado grande */
+    height: auto !important;
+    max-width: 100%;
+    display: block;
+    margin: 0 auto;
+    max-height: 85%; /* Ajustar para evitar desbordamientos */
+}
+
+/* Estilo específico para los gráficos circulares */
+.dashboard-card.grafico-circular {
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.grafico-circular canvas {
+    max-height: 80%;
+    max-width: 80%;
+}
+
+/* Mostrar el menú de navegación ocupando todo el ancho de la pantalla */
+nav#menu.active {
+    display: block;
+    position: fixed; /* Usar fixed para que ocupe toda la pantalla */
+    top: 0;
+    left: 0;
+    width: 100%; /* Asegurar que el menú ocupe todo el ancho */
+    height: 100vh; /* Ocupa toda la altura de la ventana */
+    background-color: #fff;
+    z-index: 10; /* Asegurar que el menú esté por encima del contenido */
+    overflow-y: auto; /* Agregar scroll si el contenido es muy largo */
+}
+
+/* Gráfico principal de donaciones */
+.dashboard-card.grafico-principal {
+    grid-column: 1; /* El gráfico ocupa toda la primera columna */
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 1.5em;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 0;
+}
+
+/* Contenedor de tarjetas de usuarios */
+.dashboard-card.circulares-container {
+    grid-column: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 10px; /* Espacio entre las tarjetas */
+    align-items: center;
+    height: 100%;
+}
+
+/* Ajuste del tamaño de las tarjetas de usuarios */
+.tarjeta-usuarios {
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 1.5em;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    height: 49%; /* Las tarjetas ocupan la mitad del contenedor */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Hacer que el título de las tarjetas se extienda horizontalmente */
+.tarjeta-usuarios h3,
+.dashboard-card h3 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    white-space: nowrap;
+    text-align: center;
+}
+
+/* Aumentar tamaño del número de usuarios */
+.usuarios-count {
+    font-size: 1.9em;
+    font-weight: bold;
+    margin: 0;
+    text-align: center;
+}
+
+/* Alineación de estadísticas con íconos */
+.stat-update {
+    margin-top: 5px;
+    font-size: 0.9em;
+    color: #4CAF50;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.stat-update span.emoji {
+    margin-left: 5px;
+    font-size: 1.2em;
+}
+
+/* Ajuste del encabezado y la línea negra */
+#header {
+    margin-bottom: 20px;
+    border-bottom: 2px solid #000;
+}
+
+/* Ajuste del Sidebar */
+#sidebar {
+    width: 0; /* Ocultar el sidebar cuando esté en modo oculto */
+
+    width: 300px;
+}
+
+#sidebar .inner {
+    width: 300px;
+}
+
+/* Estilo para el logo y el título del sidebar */
+#sidebar-header {
+    text-align: center;
+}
+
+#sidebar-icon {
+    width: 50px;
+}
+
+#sidebar-title {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* Estilo para subrayar la página actual en el menú */
+.subrayarPaginaActual {
+    text-decoration: underline;
+}
+/* Asegurar que las tarjetas también se expandan */
+.menu-hidden .dashboard-card {
+    width: 100%; /* Asegura que las tarjetas ocupen todo el ancho disponible */
+}
+/* Expandir el gráfico de Donaciones por Albergue y Usuarios cuando el menú hamburguesa esté activo */
+.menu-active .grafico-principal {
+    height: 50000px !important; /* Ajustar altura del gráfico de Donaciones */
+}
+
+.menu-active .circulares-container {
+    height: 450px !important; /* Ajustar altura de las tarjetas de Usuarios Activos y Baneados */
+}
+
+/* Transición suave para que el cambio sea fluido */
+.grafico-principal, .circulares-container {
+    transition: height 0.6s ease;
+}
+
+
+
+/* Mostrar el botón de hamburguesa en pantallas pequeñas */
+@media (max-width: 768px) {
+    #hamburger-menu {
+        display: flex;
+    }
+
+    nav#menu {
+        display: none;
+    }
+
+    nav#menu.active {
+        display: block;
+    }
+}
+
+/* Responsividad para pantallas medianas */
+@media (max-width: 768px) {
+    .dashboard-grid,
+    .dashboard-grid-secondary,
+    .dashboard-grid-mascotas {
+        grid-template-columns: 1fr; /* Una columna en pantallas medianas */
+    }
+    .dashboard-card.grafico-principal,
+    .dashboard-card.circulares-container {
+        grid-column: 1;
+    }
+}
+
+/* Responsividad para pantallas pequeñas */
+@media (max-width: 480px) {
+    .dashboard-grid {
+        grid-template-columns: 1fr;
+    }
+    .tarjeta-usuarios {
+        width: 90%; /* Ocupa menos ancho en pantallas pequeñas */
+    }
+}
+
+/* Ajustes responsivos adicionales */
+@media (max-width: 1024px) {
+    .dashboard-grid-secondary, .dashboard-grid-mascotas {
+        grid-template-columns: 1fr; /* Una columna en pantallas medianas/pequeñas */
+    }
+}

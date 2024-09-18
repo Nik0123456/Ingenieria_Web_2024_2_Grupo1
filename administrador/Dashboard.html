@@ -1,0 +1,265 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>PetLink - Dashboard</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="assets/css/Dashboard.css" />
+    <link rel="icon" href="images/favicon.png" type="image/x-icon">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- Librería para gráficos -->
+</head>
+<body class="is-preload">
+    <script>
+        document.getElementById('hamburger-menu').addEventListener('click', function () {
+            const wrapper = document.getElementById('wrapper');
+            const sidebar = document.getElementById('sidebar');
+            
+            // Alternar la clase que oculta el sidebar y expande el contenido
+            sidebar.classList.toggle('menu-hidden');
+            wrapper.classList.toggle('menu-hidden'); 
+            
+            console.log('Clase aplicada:', wrapper.classList); // Verificar en la consola
+        });
+    </script>
+    
+    
+    <!-- Wrapper -->
+    <div id="wrapper">
+
+        <!-- Main -->
+        <div id="main">
+            <div class="inner">
+
+                <!-- Header -->
+                <header id="header">
+                    <strong class="logo">DASHBOARD</strong>
+                    <div id="hamburger-menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </header>
+                
+                <!-- Dashboard Grid -->
+                <div class="dashboard-grid">
+                    
+                    <!-- Gráfico Principal -->
+                    <div class="dashboard-card grafico-principal">
+                        <h3>Donaciones por Albergue</h3>
+                        <canvas id="graficoDonaciones"></canvas>
+                    </div>
+
+                    <!-- Tarjetas de Usuarios -->
+                    <div class="dashboard-card circulares-container">
+                        <div class="tarjeta-usuarios">
+                            <h3>Usuarios Activos <span class="emoji">🟢</span></h3>
+                            <p class="usuarios-count">+1452</p>
+                            <p class="stat-update"><span class="emoji">📈</span> +2.4% más que el mes anterior</p>
+                        </div>
+                        <div class="tarjeta-usuarios">
+                            <h3>Usuarios Baneados <span class="emoji">🔴</span></h3>
+                            <p class="usuarios-count">645</p>
+                            <p class="stat-update"><span class="emoji">📉</span> -1.2% respecto al mes anterior</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Nueva Sección: Gráficos Inferiores -->
+                <div class="dashboard-grid-secondary">
+                    <!-- Gráfico de Top 10 Usuarios -->
+                    <div class="dashboard-card">
+                        <h3>Top 10 Usuarios con Más Donaciones Enviadas</h3>
+                        <canvas id="graficoTopUsuarios" width="300" height="150"></canvas>
+                    </div>
+
+                    <!-- Gráfico de Usuarios Activos/Inactivos -->
+                    <div class="dashboard-card grafico-circular">
+                        <h3>Usuarios Activos vs Inactivos</h3>
+                        <canvas id="graficoUsuariosActivosInactivos"></canvas>
+                    </div>
+                </div>
+
+                <!-- Nueva Sección: Gráficos de Mascotas -->
+                <div class="dashboard-grid-secondary">
+                    <!-- Gráfico Mascotas Perdidas/Encontradas - Últimos 3 Meses -->
+                    <div class="dashboard-card">
+                        <h3>Mascotas Perdidas y Encontradas - Últimos 3 Meses</h3>
+                        <canvas id="graficoMascotas3Meses"></canvas>
+                    </div>
+
+                    <!-- Gráfico Mascotas Perdidas/Encontradas - Último Año -->
+                    <div class="dashboard-card">
+                        <h3>Mascotas Perdidas y Encontradas - Último Año</h3>
+                        <canvas id="graficoMascotas1Anio"></canvas>
+                    </div>
+                </div>
+                <!-- Nueva Sección: Gráficos de Mascotas Perdidas y Encontradas -->
+            </div>
+        </div>
+
+        <!-- Sidebar -->
+        <div id="sidebar">
+            <div class="inner">
+
+                <!-- Header del Sidebar -->
+                <section class="alt" id="sidebar-header">
+                    <img src="images/favicon.png" alt="Logo" id="sidebar-icon">
+                    <p id="sidebar-title">PetLink</p>
+                </section>
+
+                <!-- Menu -->
+                <nav id="menu">
+                    <header class="major">
+                        <h2>Menu</h2>
+                    </header>
+                    <ul>
+                        <li><a href="user_events.html" class="subrayarPaginaActual">Gestión de Usuarios</a></li>
+                        <li><a href="user_shelter.html">Gestión de Eventos</a></li>
+                        <li><a href="user_temporal.html">Creación de coordinadores de zona</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+
+    <!-- Script para los Gráficos -->
+    <script>
+        // Gráfico de Donaciones por Albergue
+        var ctx1 = document.getElementById('graficoDonaciones').getContext('2d');
+        var myChart1 = new Chart(ctx1, {
+            type: 'bar',
+            data: {
+                labels: ['Albergue 1', 'Albergue 2', 'Albergue 3', 'Albergue 4'],
+                datasets: [{
+                    label: 'Donaciones',
+                    data: [12, 19, 3, 5],
+                    backgroundColor: ['rgba(255, 99, 132, 0.2)', 'rgba(54, 162, 235, 0.2)', 'rgba(255, 206, 86, 0.2)', 'rgba(75, 192, 192, 0.2)'],
+                    borderColor: ['rgba(255, 99, 132, 1)', 'rgba(54, 162, 235, 1)', 'rgba(255, 206, 86, 1)', 'rgba(75, 192, 192, 1)'],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    y: { beginAtZero: true }
+                }
+            }
+        });
+
+        // Gráfico de Top 10 Usuarios con Más Donaciones Enviadas
+        var ctx2 = document.getElementById('graficoTopUsuarios').getContext('2d');
+        var myChart2 = new Chart(ctx2, {
+            type: 'bar',
+            data: {
+                labels: ['Usuario 1', 'Usuario 2', 'Usuario 3', 'Usuario 4', 'Usuario 5', 'Usuario 6', 'Usuario 7', 'Usuario 8', 'Usuario 9', 'Usuario 10'],
+                datasets: [{
+                    label: 'Donaciones Enviadas',
+                    data: [35, 32, 30, 28, 25, 23, 21, 18, 15, 12],
+                    backgroundColor: 'rgba(54, 162, 235, 0.2)',
+                    borderColor: 'rgba(54, 162, 235, 1)',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    y: { beginAtZero: true }
+                }
+            }
+        });
+
+        // Gráfico de Usuarios Activos vs Inactivos
+        var ctx3 = document.getElementById('graficoUsuariosActivosInactivos').getContext('2d');
+        var myChart3 = new Chart(ctx3, {
+            type: 'pie',
+            data: {
+                labels: ['Usuarios Activos', 'Usuarios Inactivos'],
+                datasets: [{
+                    data: [1452, 645],
+                    backgroundColor: ['rgba(75, 192, 192, 0.6)', 'rgba(255, 99, 132, 0.6)'],
+                    borderColor: ['rgba(75, 192, 192, 1)', 'rgba(255, 99, 132, 1)'],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false
+            }
+        });
+
+        // Gráfico de Mascotas Perdidas y Encontradas - Últimos 3 Meses (Línea)
+        var ctx4 = document.getElementById('graficoMascotas3Meses').getContext('2d');
+        var myChart4 = new Chart(ctx4, {
+            type: 'line',
+            data: {
+                labels: ['Enero', 'Febrero', 'Marzo'],
+                datasets: [
+                    {
+                        label: 'Mascotas Perdidas',
+                        data: [10, 15, 12],
+                        backgroundColor: 'rgba(255, 99, 132, 0.2)',
+                        borderColor: 'rgba(255, 99, 132, 1)',
+                        fill: false, // No rellenar bajo la línea
+                        borderWidth: 2
+                    },
+                    {
+                        label: 'Mascotas Encontradas',
+                        data: [8, 12, 9],
+                        backgroundColor: 'rgba(54, 162, 235, 0.2)',
+                        borderColor: 'rgba(54, 162, 235, 1)',
+                        fill: false,
+                        borderWidth: 2
+                    }
+                ]
+            },
+            options: {
+                scales: {
+                    y: { beginAtZero: true }
+                }
+            }
+        });
+
+        // Gráfico de Mascotas Perdidas y Encontradas - Último Año (Línea)
+        var ctx5 = document.getElementById('graficoMascotas1Anio').getContext('2d');
+        var myChart5 = new Chart(ctx5, {
+            type: 'line',
+            data: {
+                labels: ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'],
+                datasets: [
+                    {
+                        label: 'Mascotas Perdidas',
+                        data: [12, 10, 15, 18, 13, 14, 17, 19, 12, 16, 11, 20],
+                        backgroundColor: 'rgba(255, 99, 132, 0.2)',
+                        borderColor: 'rgba(255, 99, 132, 1)',
+                        fill: false,
+                        borderWidth: 2
+                    },
+                    {
+                        label: 'Mascotas Encontradas',
+                        data: [9, 8, 11, 15, 10, 13, 14, 16, 9, 14, 8, 18],
+                        backgroundColor: 'rgba(54, 162, 235, 0.2)',
+                        borderColor: 'rgba(54, 162, 235, 1)',
+                        fill: false,
+                        borderWidth: 2
+                    }
+                ]
+            },
+            options: {
+                scales: {
+                    y: { beginAtZero: true }
+                }
+            }
+        });
+
+    </script>
+
+</body>
+</html>
+
